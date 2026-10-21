@@ -1,0 +1,50 @@
+ 1. [PASS] Add a valid expense
+      input: ['1', 'Lunch', '150.50', '4']
+ 2. [PASS] Blank description is re-prompted
+      input: ['1', '', '   ', 'Tea', '20', '2', '4']
+ 3. [PASS] Letters as amount
+      input: ['1', 'Tea', 'abc', '20', '4']
+ 4. [PASS] Blank amount
+      input: ['1', 'Tea', '', '20', '4']
+ 5. [PASS] Negative amount
+      input: ['1', 'Tea', '-5', '20', '4']
+ 6. [PASS] Amount 'nan' rejected
+      input: ['1', 'Tea', 'nan', '20', '3', '4']
+ 7. [PASS] Amount 'inf' rejected
+      input: ['1', 'Tea', 'inf', '20', '3', '4']
+ 8. [PASS] Amount '-inf' rejected
+      input: ['1', 'Tea', '-inf', '20', '4']
+ 9. [PASS] Amount with comma '1,200'
+      input: ['1', 'Rent', '1,200', '1200', '4']
+10. [PASS] Amount with spaces ' 75 '
+      input: ['1', 'Tea', ' 75 ', '4']
+11. [PASS] Zero amount accepted
+      input: ['1', 'Free sample', '0', '3', '4']
+12. [PASS] Decimal amount 0.1 + 0.2
+      input: ['1', 'A', '0.1', '1', 'B', '0.2', '3', '4']
+13. [PASS] View with no expenses
+      input: ['2', '4']
+14. [PASS] View several expenses
+      input: ['1', 'Tea', '20', '1', 'Bus', '35.5', '1', 'Food', '100', '2', '4']
+15. [PASS] Total with no expenses
+      input: ['3', '4']
+16. [PASS] Total matches entries
+      input: ['1', 'Tea', '20', '1', 'Bus', '35.5', '1', 'Food', '100', '3', '4']
+17. [PASS] Very large amount
+      input: ['1', 'Gold', '99999999999', '3', '4']
+18. [PASS] Invalid menu: letter
+      input: ['x', '4']
+19. [PASS] Invalid menu: 5
+      input: ['5', '4']
+20. [PASS] Invalid menu: blank
+      input: ['', '4']
+21. [PASS] Invalid menu: '1.0'
+      input: ['1.0', '4']
+22. [PASS] Menu keeps running until Exit
+      input: ['9', '2', '3', '8', '4']
+23. [PASS] Exit cleanly
+      input: ['4']
+24. [PASS] Input ends mid-entry (EOF)
+      input: ['1', 'Tea']
+
+24/24 tests passed
